@@ -1,0 +1,215 @@
+@font-face {
+	font-family: 'segotruc';
+	src: url(../font/SEGOEUI.TTF);
+}
+
+* ----------------------------------------
+ * animation Titre rotation-centre
+ * ----------------------------------------
+ */
+
+/*@keyframes animation-br {
+  0% {
+        transform: rotate(0);
+  }
+  100% {
+        transform: rotate(360deg);
+  }
+}*/
+/*@keyframes animation-titre {
+    0% {
+        opacity: 0;
+        transform: scale(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+
+}*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'segotruc', sans-serif;
+}
+
+img,
+input {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+/* HEADER */
+header nav {
+	min-height: 5vh;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.41);
+	-webkit-box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.41);
+	-moz-box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.41);
+	padding: 15px;
+}
+
+
+
+#logo span:first-child {
+	font-weight: 900;
+}
+
+#img-header {
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/architect.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*h1 {
+    opacity: 0;
+    animation-name: animation-titre;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}*/
+
+h1 span:first-child {
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 15px 25px;
+	font-weight: 900;
+	font-size: 30px;
+}
+
+h1 span:last-child {
+	display: none;
+}
+/*.animation-br {
+	animation: animation-br 0.6s ease-in-out both;
+	        
+}*/
+/*h1 .br {
+	animation-name: animation-br;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}*/
+
+main {
+	width: 85vw;
+	margin: auto;
+}
+h2 {
+	margin: 10px 0;
+	padding: 10px 0;
+	border-bottom: 0.5px rgb(151, 151, 151);
+	font-weight: 100;
+}
+
+/* SECTION PROJECT */
+#project-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/* Chaque element en position:absolute doit avoir pour son origine
+(top,left,bottom,etc...) un parent en position:relative */
+#project-gallery div {
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#project-gallery p {
+	position: absolute;
+	top: 0;
+	color: white;
+	font-weight: 900;
+	text-align: center;
+	padding: 5px 15px;
+	background-color: #000;
+}
+
+/* SECTION - ABOUT */
+#about {
+    margin: 20px 0;
+}
+.card{
+    margin: 10px 0;
+}
+.card>img {
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    /*-ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);*/
+    transition: all .5s;
+}*/
+/*.card>img {
+    filter: brightness(64%);
+    -webkit-filter: brightness(64%);
+    -moz-filter: brightness(64%);
+    transition: all .5s;
+}*/
+.card>img:hover {
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+}
+.card>h3{
+    padding: 10px 0;
+    color: #7b7b7b;
+    letter-spacing: 1px;
+}
+.card>h4{
+    color: #adadad;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+.card>p{
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.card>.contact-btn {
+	text-align: center;
+	font-weight: 600;
+    width: 85vw;
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+}
+.card>.contact-btn:hover{
+
+}
+
+/* SECTION CONTACT */
+
+
+/* les media queries sont utilisés en fin de css IMPERATIVEMENT
+et doivent être par ordre de taille d'ecran croissant */
+@media screen and (min-width:600px) {
+    
+    #project-gallery div, #team div {
+        width: 49%;
+
+    }
+    h1 span:last-child {
+        display: inline;
+    }
+}
+@media screen and (min-width:768px)  {
+    #project-gallery div, #team div {
+        width: 25%;
+    }
+}
+/* IL NE DOIT Y AVOIR AUCUN AUTRE CODE SOUS MES MEDIA QUERIES !!!!!!!!!!!!!!!!!! */
